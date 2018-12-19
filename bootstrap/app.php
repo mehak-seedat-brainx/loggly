@@ -51,5 +51,9 @@ $app->singleton(
 | from the actual running of the application and sending responses.
 |
 */
-
+$app->configureMonologUsing(function ($monolog) {
+    $handler = new Monolog\Handler\LogglyHandler(config('services.loggly.key'), Monolog\Logger::DEBUG );
+    $handler->setTag(config('services.loggly.tag'));
+    $monolog->pushHandler($handler);
+    $monolog->addWarning('Testing logs to loggly'); });
 return $app;

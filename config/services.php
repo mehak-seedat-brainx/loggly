@@ -34,5 +34,6 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+    'loggly' => [ 'key' => env('LOGGLY_KEY'), 'tag' => 'lsapp_' .strtolower(App::environment()), ],
 
 ];

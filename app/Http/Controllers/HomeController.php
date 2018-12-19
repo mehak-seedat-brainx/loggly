@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use PragmaRX\ZipCode\ZipCode;
+use Illuminate\Support\Facades\Log;
+
 
 class HomeController extends Controller
 {
@@ -24,6 +27,9 @@ class HomeController extends Controller
     {
         $user_id=auth()->user()->id;
         $user=User::find($user_id);
+        $z = new ZipCode();
+        $z->setCountry('United States');
+        Log::info($z->find('10006')->toArray());
         return view('home')->with('posts', $user->posts);
     }
 }

@@ -121,7 +121,7 @@ return [
     |
     */
 
-    'log' => env('APP_LOG', 'single'),
+    'log' => env('APP_LOG', 'custom'),
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
@@ -162,9 +162,12 @@ return [
         Illuminate\Session\SessionServiceProvider::class,
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
+        Unisharp\Ckeditor\ServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-        Unisharp\Ckeditor\ServiceProvider::class,
+        Zizaco\Entrust\EntrustServiceProvider::class,
+        PragmaRX\ZipCode\Vendor\Laravel\ServiceProvider::class,
+
 
         /*
          * Package Service Providers...
@@ -229,6 +232,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
+        'ZipCode' => PragmaRX\ZipCode\Vendor\Laravel\Facade::class,
+
 
     ],
 

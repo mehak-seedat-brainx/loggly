@@ -10,13 +10,17 @@
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4.0",
+        "monolog/monolog": "^1.24",
+        "pragmarx/zipcode": "^1.5",
+        "tcg/voyager": "^1.1",
         "unisharp/laravel-ckeditor": "^4.7"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~6.0"
+        "phpunit/phpunit": "~6.0",
+        "zizaco/entrust": "5.2.x-dev"
     },
     "autoload": {
         "classmap": [
